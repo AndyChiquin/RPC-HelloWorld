@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package holamundo;
+
+// Definición del servicio
+service HolaMundoService {
+    rpc DecirHola (HolaRequest) returns (HolaResponse);
+}
+
+// Mensaje de solicitud
+message HolaRequest {
+    string nombre = 1;
+}
+
+// Mensaje de respuesta
+message HolaResponse {
+    string mensaje = 1;
+}
